@@ -15,7 +15,7 @@ window.onmessage = function(message) {
 	case 'connect':
 		master = message.source;
 		initialize(master.gba);
-		master.postMessage('connected', document.domain || '*');
+		master.postMessage('connected', '*');
 		break;
 	case 'disconnect':
 		master = null;
